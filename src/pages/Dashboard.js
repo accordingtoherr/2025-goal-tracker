@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import GoalList from "../components/GoalList";
-import ProgressBar from "../components/ProgressBar";
 import { loadHabits, saveHabits } from "../utils/localStorage";
 
 const Dashboard = () => {
@@ -37,7 +36,6 @@ const Dashboard = () => {
     </button>
   </div>
   <div className="mt-4 w-full max-w-md">
-    <ProgressBar habits={habits} />
     <GoalList habits={habits} setHabits={setHabits} />
   </div>
 </div>

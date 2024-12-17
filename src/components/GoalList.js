@@ -3,9 +3,13 @@ import GoalItem from './GoalItem';
 
 function GoalList({ habits, onToggleCompletion }) {
   return (
-    <ul>
+    <ul className="space-y-3">
       {habits.map((habit) => (
-        <GoalItem key={habit.id} habit={habit} onToggleCompletion={onToggleCompletion} />
+        <GoalItem
+          key={habit.id}
+          habit={habit}
+          onToggleCompletion={onToggleCompletion}
+        />
       ))}
     </ul>
   );

@@ -1,12 +1,16 @@
-import React from "react";
+import React from 'react';
 
-const GoalItem = ({ habit }) => {
-    return (
-      <div>
-        <h3>{habit.name}</h3>
-        <p>{habit.completed} / {habit.target} completed</p>
-      </div>
-    );
-  };
+function GoalItem({ habit, onToggleCompletion }) {
+  return (
+    <li>
+      <span>{habit.goal}</span>
+      <input
+        type="checkbox"
+        checked={habit.completed}
+        onChange={() => onToggleCompletion(habit.id)}
+      />
+    </li>
+  );
+}
 
 export default GoalItem;

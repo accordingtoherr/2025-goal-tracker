@@ -1,12 +1,14 @@
-import React from "react";
+import React from 'react';
+import GoalItem from './GoalItem';
 
-const GoalList = () => {
+function GoalList({ habits, onToggleCompletion }) {
   return (
-    <div>
-      <h2>Add some resolutions</h2>
-      <p>No goals yet, add some</p>
-    </div>
+    <ul>
+      {habits.map((habit) => (
+        <GoalItem key={habit.id} habit={habit} onToggleCompletion={onToggleCompletion} />
+      ))}
+    </ul>
   );
-};
+}
 
 export default GoalList;
